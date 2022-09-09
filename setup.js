@@ -19,7 +19,6 @@ class Setup {
 
     this.uniforms = {
       uTime: { value: 0 },
-      uResolution: { value: { x: 0, y: 0 } },
     };
 
     const program = new THREE.ShaderMaterial({
