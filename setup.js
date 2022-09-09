@@ -19,28 +19,32 @@ class Setup {
 
     this.uniforms = {
       uTime: { value: 0 },
-      uViewport: { value: { x: 0, y: 0 } },
+      uResolution: { value: { x: 0, y: 0 } },
     };
 
     const program = new THREE.ShaderMaterial({
       vertexShader: `
+        varying vec2 vUv;
         void main() {
-          gl_Position = vec4(position, 1.);
+          gl_Position = modelMatrix * vec4(position, 1.);
+          vUv = uv;
         }
       `,
       fragmentShader: shader,
       uniforms: this.uniforms,
     });
-    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), program);
-    this.scene.add(mesh);
+    this.mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), program);
+    this.scene.add(this.mesh);
     this.resize();
     this.render();
   }
 
   resize() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.uniforms.uViewport.value.x = window.innerWidth;
-    this.uniforms.uViewport.value.y = window.innerHeight;
+    const aspect = window.innerWidth / window.innerHeight;
+    aspect >= 1
+      ? this.mesh.scale.set(1 / aspect, 1, 1)
+      : this.mesh.scale.set(1, aspect, 1);
   }
 
   render() {
