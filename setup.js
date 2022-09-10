@@ -14,7 +14,6 @@ class Setup {
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.container.appendChild(this.renderer.domElement);
-    this.renderer.setClearColor(0x333333);
     window.addEventListener("resize", this.resize.bind(this));
 
     this.uniforms = {
