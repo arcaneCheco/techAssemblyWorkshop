@@ -29,5 +29,5 @@ git fetch
 git switch <i>branch</i>
 </pre>
 
-## List of built-in functions
+## List of built-in glsl functions
 http://15462.courses.cs.cmu.edu/fall2019/article/20
