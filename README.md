@@ -27,3 +27,6 @@ This repository consists of 4 branches; `katas` and `raymarcher` containing the 
 git fetch
 git switch <i>branch</i>
 </pre>
+
+## List of built-in functions
+http://15462.courses.cs.cmu.edu/fall2019/article/20
