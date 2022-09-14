@@ -1,4 +1,4 @@
-# IMG Arena Tech Assmebly 22/09/2022 - workshop on 3D graphics
+# IMG Arena Tech Assembly 22/09/2022 - workshop on 3D graphics
 https://user-images.githubusercontent.com/20417385/189540994-7f9c7cc7-daaa-4304-b482-c0e6ec2a2f4e.mov
 
 ## Access the presentation slides
