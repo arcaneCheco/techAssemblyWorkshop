@@ -6,6 +6,8 @@ float scene(vec3 position) {
 }
 
 float rayMarch(vec3 origin, vec3 direction) {
+    vec3 position = origin;
+
     float dOrigin = 100.;
 
     return dOrigin;
